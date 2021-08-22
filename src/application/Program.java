@@ -13,9 +13,11 @@ public class Program {
 
 		ContaSalario contaSalario = new ContaSalario("Huguinho", 888, 3581, 1000, 3500);
 		contaSalario.sacar(300);
+		contaSalario.depositar(300);
 		
 		ContaCorrente contaCorrente = new ContaCorrente("Fulaninho", 777, 3582, 1000, 2000);
 		contaCorrente.sacar(300);
+		contaCorrente.depositar(300);
 	}
 
 }

@@ -27,4 +27,10 @@ public class ContaSalario extends Conta{
 			System.out.println("Meu saldo de conta salário é: " + sacado);
 		}
 	}
+	
+	@Override
+	public void depositar(int quantia) {
+		saldo += quantia;
+		System.out.println("depositei: " + quantia + " na minha conta salário");
+	}
 }

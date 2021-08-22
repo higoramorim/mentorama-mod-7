@@ -27,5 +27,11 @@ public class ContaCorrente extends Conta {
 			System.out.println("meu saldo de Conta Corrente é: " + saldo);
 		}
 	}
+	
+	@Override
+	public void depositar(int quantia) {
+		saldo += quantia;
+		System.out.println("depositei: " + quantia);
+	}
 
 }
