@@ -38,6 +38,11 @@ public class ContaPoupanca extends Conta {
 		this.tempoDepositadoMeses = tempoDepositadoMeses;
 	}
 	
+	/*
+	 * usado formula juros compostos M = C(1 + taxa juros)^tempo, onde M = montante e C = Capital
+	 * Caso dia consulta for inferior a data de aniversário o montante será considerado como se a consulta 
+	 * fosse do saldo do mês passado, caso seja igual ou superior ela calculará de forma esperada
+	 */
 	public void meuSaldo(int aniversario, double txJuros, int tempoDepositadoMeses, int diaConsulta) {
 		float base = (float) (1 + txJuros);
 		float montante = (float) (saldo * Math.pow(base, tempoDepositadoMeses));
