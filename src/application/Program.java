@@ -2,6 +2,7 @@ package application;
 
 import model.ContaCorrente;
 import model.ContaPoupanca;
+import model.ContaSalario;
 
 public class Program {
 
