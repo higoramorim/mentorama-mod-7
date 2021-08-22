@@ -45,8 +45,12 @@ public class Conta {
 		return saldo;
 	}
 
-	public void setSaldo(int saldo) {
-		this.saldo = saldo;
-	}
 
+	public void sacar(int quantia) {
+		saldo -= quantia;
+	}
+	
+	public void depositar(int quantia) {
+		saldo += quantia;
+	}
 }
