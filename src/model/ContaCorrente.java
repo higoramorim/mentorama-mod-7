@@ -24,14 +24,14 @@ public class ContaCorrente extends Conta {
 			System.out.println("não é possível sacar valor superior a soma do cheque especial mais saldo");
 		} else {
 			saldo = limite - quantia;
-			System.out.println("meu saldo de Conta Corrente é: " + saldo);
+			System.out.println("saldo atualizado Conta Corrente pós saque: " + saldo);
 		}
 	}
 	
 	@Override
 	public void depositar(int quantia) {
-		saldo += quantia;
-		System.out.println("depositei: " + quantia);
+		int depositado = quantia + getSaldo();
+		System.out.println("saldo atualizado Conta Corrente pós depósito: " + depositado);
 	}
 
 }

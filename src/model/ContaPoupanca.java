@@ -5,6 +5,9 @@ public class ContaPoupanca extends Conta {
 	private double txJuros;
 	private int aniversario;
 	private int tempoDepositadoMeses;
+	
+	public ContaPoupanca() {
+	}
 
 	public ContaPoupanca(String nomeCliente, int id, int numeroConta, int saldo, double txJuros, int aniversario,
 			int tempoDepositadoMeses) {
@@ -47,10 +50,20 @@ public class ContaPoupanca extends Conta {
 		float base = (float) (1 + txJuros);
 		float montante = (float) (saldo * Math.pow(base, tempoDepositadoMeses));
 		if (diaConsulta >= aniversario) {
-			System.out.println("meu saldo atual da Poupança é: " + montante);
+			System.out.println("meu saldo atual da Poupança é: " + montante );
 		} else {
 			montante = (float) (saldo * Math.pow(base, tempoDepositadoMeses - 1));
-			System.out.println("meu saldo atual da Poupança é: " + montante);
+			System.out.println("meu saldo atual da Poupança é: " + montante );
+		}
+	}
+	
+	@Override
+	public void sacar(int quantia) {
+		if (quantia > saldo) {
+			System.out.println("Não é possível fazer saque com valor superior ao saldo total disponível");
+		} else {
+			int sacado = getSaldo() - quantia;
+			System.out.println("Meu saldo de conta salário é: " + sacado);
 		}
 	}
 

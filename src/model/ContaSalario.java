@@ -24,13 +24,13 @@ public class ContaSalario extends Conta{
 		} else {
 			saldo += salario;
 			int sacado = saldo - quantia;
-			System.out.println("Meu saldo de conta salário é: " + sacado);
+			System.out.println("Saldo de conta salário pós saque: " + sacado);
 		}
 	}
 	
 	@Override
 	public void depositar(int quantia) {
-		saldo += quantia;
-		System.out.println("depositei: " + quantia + " na minha conta salário");
+		int depositado = quantia + getSaldo();
+		System.out.println("Saldo de conta salário pós depósito: " + depositado);
 	}
 }
